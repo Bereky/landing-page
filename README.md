@@ -4,7 +4,7 @@
 <h4>Greeting based on time</h4>
 <h4>Generate Quotes every hour</h4>
 <br>
-<h5>Full Screen vs Narrow Screen</h5>
+<h5>Wide Screen vs Narrow Screen</h5>
 <br>
 
 ![Screenshot wider](https://user-images.githubusercontent.com/50754357/140196085-59fa1bfc-df3d-4154-a708-4991ba15e4aa.png)
