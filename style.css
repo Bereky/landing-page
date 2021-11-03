@@ -1,0 +1,53 @@
+* {
+    margin: 0px;
+    padding: 0px;;
+    font-family: Monospace;
+    color: rgb(240, 240, 240);
+}
+
+.img-container {
+    background: url(./images/background.png) no-repeat center center/cover;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    filter: blur(0px) brightness(0.6);
+}
+
+.greeting {
+    transition: .6s;
+    text-align: center;
+    margin: 10px 0 90px 0;
+    font-size: 1.1rem;
+}
+
+.time-hour {
+    margin: 0 0 0rem 0px;
+    font-size: 5.2rem;
+    text-align: center;
+}
+
+.date-display {
+    margin: 0 0 30px 0;
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+.quote-container {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.quote {
+    font-size: 1.9rem;
+    text-align: center;
+}
+
+.author {
+    margin: 10px;
+    font-size: 20px;
+    text-align: center;
+}
