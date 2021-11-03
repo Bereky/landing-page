@@ -1,8 +1,7 @@
                     /* Resposive Landing Page */
-                    /* Written by Bereket */
+                    /* Written by Bereket L.*/
 
-/* VARIABLES */
-
+// variables
 const time_hour = document.querySelector('.time-hour');
 const date = document.querySelector('.date');
 const day = document.querySelector('.day');
@@ -14,8 +13,7 @@ const author = document.querySelector('.author');
 let days = ['Monday', 'Tuesday', 'Wednsday', 'Thursday', 'Friday', 'Saturaday', 'Sunday'];
 let quoteCount = 0;
 
-/*  THE QUOTES */
-
+// quotes
 let quotes = [
     {
         author: 'Marcus Aurelius',
@@ -39,8 +37,7 @@ let quotes = [
     },
 ];
 
-/*  the displayer function  */
-
+// the displayer 
 function display(){
     let timer = new Date();
     let amPm;
@@ -50,7 +47,7 @@ function display(){
     let today = timer.getDay();
     let currentDate = timer.getDate();
     let currentYear = timer.getFullYear();
-    /* set the greeting based on time */
+    //set the greeting based on time 
     if(hour > 12){
         hour = hour - 12;
         amPm = 'PM'
@@ -72,7 +69,7 @@ function display(){
         }
     }
 
-    /* add zeros to the timer area */
+    //add zeros to the timer area 
     if(second < 10){
         second = '0' + second;
     }
@@ -83,7 +80,7 @@ function display(){
         hour = '0' + hour;
         } 
 
-    /*display the time */
+    //display the time 
     time_hour.innerHTML = (`${hour}:${minute}:${second} ${amPm}`);
     day.innerHTML = `${days[today-1]}`;
     date.innerHTML = `${currentDate},`;
@@ -92,13 +89,12 @@ function display(){
 }
 
 
-/* display the quotes */
-
+//display the quotes
 function displayQuote(){
     quote.innerHTML = quotes[quoteCount].quote;
     author.innerHTML = quotes[quoteCount].author;
     
-    /* Repeat every 5 min */
+    //Repeat every 5 min 
     setTimeout(displayQuote, 300000);
     quoteCount++;
     if(quoteCount == quotes.length){
@@ -106,8 +102,7 @@ function displayQuote(){
     }
 }
 
-/* start the functions */
-
+//start the functions
 window.addEventListener('DOMContentLoaded', () => {
     display();
     displayQuote();
