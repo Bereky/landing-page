@@ -105,7 +105,6 @@ function displayQuote(){
 //start the functions
 window.addEventListener('DOMContentLoaded', () => {
     display();
-    displayQuote();
-    
+    displayQuote();   
 });
 
