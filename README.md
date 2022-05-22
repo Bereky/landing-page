@@ -1,7 +1,7 @@
 <h2> Responsive Landing Page </h2>
 
-<h4>Live timer</h4>
-<h4>Greeting based on time</h4>
+<h4>Live clock</h4>
+<h4>Greeting based on current time</h4>
 <h4>Generate Quotes every hour</h4>
 <br>
 <h5>Wide Screen vs Narrow Screen</h5>
