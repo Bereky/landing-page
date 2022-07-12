@@ -5,6 +5,7 @@
 const time_hour = document.querySelector('.time-hour');
 const date = document.querySelector('.date');
 const day = document.querySelector('.day');
+const month = document.querySelector('.month');
 const year = document.querySelector('.year');
 const greeting = document.querySelector('.greet');
 const quote = document.querySelector('.quote');
@@ -46,6 +47,7 @@ function display(){
     let hour = timer.getHours();
     let today = timer.getDay();
     let currentDate = timer.getDate();
+    let currentMonth = timer.getMonth();
     let currentYear = timer.getFullYear();
     //set the greeting based on time 
     if(hour > 12){
@@ -84,6 +86,8 @@ function display(){
     time_hour.innerHTML = (`${hour}:${minute}:${second} ${amPm}`);
     day.innerHTML = `${days[today-1]}`;
     date.innerHTML = `${currentDate},`;
+    const options = { month: 'long'};
+    month.innerHTML = new Intl.DateTimeFormat('en-US', options).format(currentMonth);
     year.innerHTML = currentYear;
     setTimeout(display, 1000);
 }
