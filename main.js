@@ -86,8 +86,10 @@ function display(){
     time_hour.innerHTML = (`${hour}:${minute}:${second} ${amPm}`);
     day.innerHTML = `${days[today-1]}`;
     date.innerHTML = `${currentDate},`;
+    
     const options = { month: 'long'};
-    month.innerHTML = new Intl.DateTimeFormat('en-US', options).format(currentMonth);
+    let myMonth = new Intl.DateTimeFormat('en-US', options).format(currentMonth);
+    month.innerHTML = myMonth;
     year.innerHTML = currentYear;
     setTimeout(display, 1000);
 }
