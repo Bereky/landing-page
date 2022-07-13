@@ -12,6 +12,7 @@ const quote = document.querySelector('.quote');
 const author = document.querySelector('.author');
 
 let days = ['Monday', 'Tuesday', 'Wednsday', 'Thursday', 'Friday', 'Saturaday', 'Sunday'];
+let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 let quoteCount = 0;
 
 // quotes
@@ -86,10 +87,7 @@ function display(){
     time_hour.innerHTML = (`${hour}:${minute}:${second} ${amPm}`);
     day.innerHTML = `${days[today-1]}`;
     date.innerHTML = `${currentDate},`;
-    
-    const options = { month: 'long'};
-    let myMonth = new Intl.DateTimeFormat('en-US', options).format(currentMonth);
-    month.innerHTML = myMonth;
+    month.innerHTML = months[currentMonth];
     year.innerHTML = currentYear;
     setTimeout(display, 1000);
 }
